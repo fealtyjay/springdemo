@@ -12,5 +12,9 @@ public interface ICardDAO {
 	Card findCard(String asset_code)throws Exception;
 	List<Card> findall() throws Exception;
 	List<Dep> findDep()throws Exception;
+	
+	
+	
+	
 
 }
