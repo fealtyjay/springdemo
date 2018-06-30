@@ -51,5 +51,11 @@ public class UserController {
 		List<User> users = userService.findByuser_name(name);
 		return users.get(0);
 	}
+	@ApiOperation(value = "修改用户的密码",notes="根据用户编码修改用户密码")
+	@RequestMapping(value="/updatepwd",method=RequestMethod.POST)
+	public  void setUserPasswordByCode(@RequestParam(value="userCode")String userCode,
+			@RequestParam(value="password")String passWord) {
+		userService.updatePWD(userCode, passWord);
+	}
 
 }

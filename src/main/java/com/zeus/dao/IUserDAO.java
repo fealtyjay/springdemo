@@ -12,6 +12,8 @@ public interface IUserDAO
      public List<User> findByuser_name( String user_name);
      
      public List<User> findAll();
+     
+     public void updatePWD(String usercode,String pwd);
 	
      
      
